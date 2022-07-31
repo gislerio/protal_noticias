@@ -19,3 +19,4 @@ use App\Http\Controllers\NoticiasController;
 }); */
 
 Route::get('/', [NoticiasController::class, 'index'])->name('home');
+Route::get('/detalhe/{id}', [NoticiasController::class, 'detalhe'])->name('detalhe');

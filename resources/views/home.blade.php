@@ -26,13 +26,13 @@
                 @foreach ($noticiashome as $noticia)
                     <div class="col-md-4">
                         <div class="card">
-                            <img class="card-img-top" src="{{ 'img/capa.jpg' }}" alt="Imagem de capa do card">
+                            <img class="card-img-top" src="{{ asset('/img/capa.jpg') }}" alt="Imagem de capa do card">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $noticia->titulo }}</h5>
                                 <p class="card-text">
                                     {{ $noticia->descricao}}
                                 </p>
-                                <a href="#" class="btn btn-primary">Visitar</a>
+                                <a href="{{ route('detalhe', $noticia->id)}}" class="btn btn-primary">Visitar</a>
                             </div>
                         </div>
                     </div>
